@@ -1,0 +1,137 @@
+.testimonials-section {
+    background: var(--light-secondary);
+}
+
+/* HEADER */
+
+.testimonials-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto var(--space-6);
+}
+
+.testimonials-header h2 {
+    font-size: 2.6rem;
+    margin: var(--space-1) 0 var(--space-2);
+}
+
+.testimonials-header h2 span {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.testimonials-header p {
+    color: var(--text-secondary);
+}
+
+/* GRID */
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+}
+
+/* CARD */
+
+.testimonials-card {
+    position: relative;
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    border: 1px solid var(--light-tertiary);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.testimonials-card:hover {
+    box-shadow: var(--shadow-lg), var(--glow);
+}
+
+/* TOP ACCENT */
+
+.testimonials-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: var(--brand-gradient);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.testimonials-card:hover::before {
+    opacity: 1;
+}
+
+/* QUOTE */
+
+.testimonials-quote-icon {
+    color: var(--primary-cyan);
+    opacity: 0.25;
+    margin-bottom: var(--space-2);
+}
+
+/* TEXT */
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--text-primary);
+    line-height: 1.7;
+    margin-bottom: var(--space-3);
+}
+
+/* REVIEWER */
+
+.testimonials-reviewer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/* AVATAR */
+
+.reviewer-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--brand-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+}
+
+/* NAME */
+
+.testimonials-reviewer-info h4 {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.testimonials-reviewer-info span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 968px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-header h2 {
+        font-size: 2rem;
+    }
+}

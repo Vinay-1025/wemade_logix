@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://accelyzei-technology.web.app/sitemap.xml
