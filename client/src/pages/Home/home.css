@@ -1,0 +1,8 @@
+.home-page-main {
+    /* Home page specific styles */
+    overflow-x: hidden;
+}
+
+.home-page-placeholder {
+    background: white;
+}

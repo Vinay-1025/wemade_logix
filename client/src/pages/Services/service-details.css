@@ -1,0 +1,330 @@
+.service-details-page {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: var(--space-10);
+}
+
+/* HERO */
+.sd-hero {
+    padding: 220px 0 120px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    text-align: left;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.sd-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(10, 15, 30, 0.8) 0%,
+            rgba(10, 15, 30, 0.9) 100%);
+    z-index: 1;
+}
+
+.sd-hero-content {
+    max-width: 900px;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+}
+
+/* BACK BUTTON */
+.sd-back-btn {
+    position: absolute;
+    top: 140px;
+    left: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    z-index: 100;
+    transition: var(--transition);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.sd-back-btn:hover {
+    background: white;
+    color: var(--dark-bg);
+    transform: translateX(-5px);
+}
+
+.sd-icon-wrapper {
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
+}
+
+.sd-hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 25px;
+    line-height: 1.1;
+    background: var(--brand-gradient1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.sd-lead {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* CONTENT GRID */
+.sd-content-section {
+    padding: var(--space-10) 0;
+}
+
+.sd-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: var(--space-10);
+    align-items: start;
+}
+
+.sd-main h2 {
+    font-size: 3rem;
+    margin-bottom: 35px;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+}
+
+.sd-main h2 span {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sd-description-p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.sd-features-grid {
+    margin-top: var(--space-8);
+    background: var(--light-secondary);
+    padding: 70px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--light-tertiary);
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.01);
+}
+
+.sd-features-grid h3 {
+    font-size: 2rem;
+    margin-bottom: 45px;
+    font-weight: 800;
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.sd-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.check-icon {
+    color: var(--primary-cyan);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* SIDEBAR */
+.sd-stats-card {
+    background: white;
+    padding: 50px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--light-secondary);
+    margin-bottom: 40px;
+}
+
+.sidebar-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.sd-stat-box {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--light-secondary);
+}
+
+.sd-stat-box:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+.sd-stat-box:first-child {
+    padding-top: 0;
+}
+
+.stat-value {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-neutral);
+    font-weight: 800;
+}
+
+.sd-cta-card {
+    background: var(--brand-gradient);
+    padding: 50px;
+    border-radius: var(--radius-xl);
+    color: white;
+    text-align: center;
+}
+
+.sd-cta-card h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.sd-cta-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 35px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.sd-cta-btn {
+    width: 100%;
+}
+
+/* WHY US */
+.sd-why-us {
+    padding: 100px 0;
+    border-top: 1px solid var(--light-tertiary);
+    background: var(--light-bg);
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    text-align: center;
+}
+
+.why-icon {
+    color: var(--primary-blue);
+    margin-bottom: 25px;
+}
+
+.why-us-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.why-us-item p {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* MOBILE */
+@media (max-width: 1200px) {
+    .sd-back-btn {
+        left: 30px;
+    }
+
+    .sd-grid {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sd-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sd-sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .sd-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .sd-back-btn {
+        top: 120px;
+        left: 20px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sd-hero {
+        padding: 180px 0 100px;
+        text-align: center;
+    }
+
+    .sd-hero-content {
+        margin: 0 auto;
+    }
+
+    .sd-lead {
+        margin: 0 auto;
+    }
+
+    .features-list {
+        grid-template-columns: 1fr;
+    }
+
+    .sd-features-grid {
+        padding: 40px 30px;
+    }
+
+    .sd-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .why-us-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sd-hero h1 {
+        font-size: 2.8rem;
+    }
+}

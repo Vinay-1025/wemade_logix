@@ -1,0 +1,138 @@
+.technologies-section {
+    background: linear-gradient(180deg, #0f172a, #020617);
+    color: white;
+}
+
+.technologies-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 4rem;
+}
+
+.technologies-header h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.technologies-header h2 span {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.technologies-header p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* MARQUEE */
+
+.technologies-marquee {
+    overflow: hidden;
+    position: relative;
+}
+
+.technologies-marquee::before,
+.technologies-marquee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 3;
+}
+
+.technologies-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, #020617, transparent);
+}
+
+.technologies-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, #020617, transparent);
+}
+
+/* TRACK */
+
+.technologies-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* CARD */
+
+.technologies-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    border-radius: 14px;
+    min-width: 200px;
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+    transition: all .35s ease;
+}
+
+/* HOVER */
+
+.technologies-item:hover {
+    /* transform: translateY(-4px) scale(1.03); */
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ICON */
+
+.tech-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TEXT */
+
+.tech-text h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.tech-text span {
+    font-size: .72rem;
+    color: #94a3b8;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .technologies-header h2 {
+        font-size: 2rem;
+    }
+
+    .technologies-track {
+        gap: 20px;
+    }
+
+    .technologies-item {
+        min-width: 170px;
+    }
+
+}

@@ -1,0 +1,331 @@
+/* LMS Global Styles - Aligned with global.css */
+.lms-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--light-secondary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar Styling */
+.lms-sidebar {
+  width: 260px;
+  background: white;
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 100;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.02);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lms-sidebar.mini {
+  width: 80px;
+}
+
+.lms-sidebar-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--light-secondary);
+}
+
+.lms-sidebar-logo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.lms-sidebar-scroll-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 0;
+}
+
+/* Custom Scrollbar for Sidebar */
+.lms-sidebar-scroll-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.lms-sidebar-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--light-tertiary);
+  border-radius: 10px;
+}
+
+.lms-sidebar-nav {
+  padding: 0 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.lms-sidebar-footer {
+  padding: 1.25rem 0.75rem;
+  border-top: 1px solid var(--light-secondary);
+  background: white;
+}
+
+.lms-sidebar-user-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.mini .lms-sidebar-user-section {
+  align-items: center;
+}
+
+.lms-sidebar-avatar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  background: var(--light-secondary);
+  border-radius: var(--radius-md);
+}
+
+.mini .lms-sidebar-avatar-wrapper {
+  padding: 0.25rem;
+  background: none;
+}
+
+.lms-sidebar-avatar {
+  width: 32px;
+  height: 32px;
+  background: var(--brand-gradient);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.lms-sidebar-user-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.user-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-role {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.lms-logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.75rem;
+  background: #fffafa;
+  border: 1px solid #fee2e2;
+  color: #ef4444;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.mini .lms-logout-btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+
+.lms-logout-btn:hover {
+  background: #fef2f2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.1);
+}
+
+.lms-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition);
+  gap: 1rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.lms-nav-item:hover {
+  background: var(--light-secondary);
+  color: var(--primary-blue);
+}
+
+.lms-nav-item.active {
+  background: rgba(0, 71, 171, 0.05);
+  color: var(--primary-blue);
+  position: relative;
+}
+
+.lms-nav-item.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 4px;
+  background: var(--brand-gradient);
+  border-radius: 0 4px 4px 0;
+}
+
+.lms-nav-icon {
+  font-size: 1.25rem;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Content Area */
+.lms-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #fdfdfd;
+}
+
+.lms-header {
+  height: 80px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--light-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100 !important;
+}
+
+.lms-toggle-btn {
+  background: var(--light-secondary);
+  border: 1px solid var(--light-tertiary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.lms-toggle-btn:hover {
+  background: white;
+  color: var(--primary-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.lms-content {
+  padding: 2.5rem;
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .lms-sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+    z-index: 200;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+  }
+  
+  .lms-sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .lms-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .lms-header {
+    padding: 0 1rem;
+    height: 70px !important;
+  }
+  
+  .lms-content {
+    padding: 1rem;
+    padding-top: 1.5rem !important;
+  }
+}
+
+/* Page Components */
+.lms-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--light-tertiary);
+  transition: var(--transition);
+}
+
+.lms-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.lms-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.lms-page-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.25rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.03em;
+}
+
+.lms-page-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Production-Ready Gradient Backgrounds */
+.lms-grain {
+  position: relative;
+}
+
+.lms-grain::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}

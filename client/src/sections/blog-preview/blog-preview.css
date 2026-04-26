@@ -1,0 +1,136 @@
+.blog-preview-section {
+    background: var(--light-bg);
+}
+
+/* HEADER */
+
+.blog-preview-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto var(--space-6);
+}
+
+.blog-preview-header h2 {
+    font-size: 2.6rem;
+    margin: var(--space-1) 0 var(--space-2);
+}
+
+.blog-preview-header h2 span {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blog-preview-header p {
+    color: var(--text-secondary);
+}
+
+/* GRID */
+
+.blog-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+}
+
+/* CARD */
+
+.blog-preview-card {
+    background: white;
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--light-tertiary);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+}
+
+/* ACCENT BAR */
+
+.blog-preview-card::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: var(--brand-gradient);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.blog-preview-card:hover::before {
+    opacity: 1;
+}
+
+.blog-preview-card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+/* META */
+
+.blog-preview-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-bottom: var(--space-2);
+}
+
+.blog-category {
+    color: var(--primary-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.blog-date {
+    color: var(--text-neutral);
+}
+
+/* TITLE */
+
+.blog-preview-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-2);
+}
+
+/* TEXT */
+
+.blog-preview-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-3);
+}
+
+/* LINK */
+
+.blog-preview-link {
+    background: none;
+    border: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.blog-preview-link:hover {
+    color: var(--primary-cyan);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 968px) {
+    .blog-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-preview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-preview-header h2 {
+        font-size: 2rem;
+    }
+}
