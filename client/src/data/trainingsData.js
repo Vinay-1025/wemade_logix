@@ -312,68 +312,6 @@ export const coursesData = [
         ]
     },
     {
-        id: 6,
-        slug: 'cybersecurity-fundamentals',
-        title: 'Cybersecurity Fundamentals',
-        category: 'Security',
-        level: 'beginner',
-        duration: '10 Weeks',
-        students: '1.5k+',
-        modules_count: 40,
-        rating: 4.7,
-        reviews_count: 540,
-        last_updated: 'May 2024',
-        language: 'English',
-        price: 'Corporate',
-        description: 'Protect the digital frontier. Learn the techniques used by hackers and, more importantly, how to defend against them.',
-        image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop',
-        instructor: {
-            name: 'Robert Miller',
-            role: 'Ethical Hacker & CISO',
-            bio: 'Robert has spent decades in digital forensics and defensive security for financial institutions.',
-            image: 'https://i.pravatar.cc/150?u=robert'
-        },
-        what_you_will_learn: [
-            'The foundations of Ethical Hacking.',
-            'Network Security and Penetration Testing.',
-            'Web Application Security (OWASP Top 10).',
-            'Identity and Access Management principles.',
-            'Incident Response and Disaster Recovery.',
-            'Social Engineering and Phishing defense.'
-        ],
-        curriculum: [
-            {
-                section_title: 'Module 1: Intro to Cybersecurity',
-                lessons: ['The Threat Landscape', 'Security Models (CIA Triad)', 'Cryptography Basics', 'Operating System Hardening']
-            },
-            {
-                section_title: 'Module 2: Network Security',
-                lessons: ['TCP/IP Protocol Security', 'Firewalls & IDS/IPS', 'Wireless Security (WPA3)', 'VPNs & Secure Tunneling']
-            },
-            {
-                section_title: 'Module 3: Defensive & Offensive',
-                lessons: ['Vulnerability Scanning', 'Social Engineering Labs', 'Malware Analysis', 'Log Auditing']
-            },
-            {
-                section_title: 'Module 4: Compliance & Strategy',
-                lessons: ['GDPR, HIPAA, SOC2 Overview', 'Risk Assessment Frameworks', 'Business Continuity Planning', 'Cyber Law & Ethics']
-            }
-        ],
-        prerequisites: [
-            'Interest in Digital Security',
-            'Basic networking concepts knowledge',
-            'Comfortable with Command Line interface'
-        ],
-        schedule: 'Mon, Thu | 6:30 PM - 8:30 PM IST',
-        inclusions: [
-            'Hands-on Hacking Labs',
-            'Practice Exam for CompTIA Security+',
-            'Capture The Flag (CTF) Events',
-            'Cybersecurity Career Roadmap',
-            'Personal Cybersecurity Audit'
-        ]
-    },
-    {
         id: 100,
         slug: 'summer-mern-training-2026',
         title: 'Summer MERN Stack Training 2026',
