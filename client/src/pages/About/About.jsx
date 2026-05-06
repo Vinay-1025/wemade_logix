@@ -351,7 +351,22 @@ const About = () => {
         </div>
       </section>
 
-      
+      {/* LEADERSHIP SECTION */}
+      {/*<section className="about-team-lux">
+        <div className="container">
+          <div className="lux-center-header">
+            <span className="lux-subtitle">Leadership</span>
+            <h2 className="lux-section-title">The <span>Minds</span> Behind Logix</h2>
+            <p className="lux-header-desc">Experts in AI, cloud engineering, and enterprise software strategy.</p>
+          </div>
+
+          <div className="team-lux-grid">
+            <LeadershipCardLux name="Mirza Faraz" role="CEO & Founder" />
+            <LeadershipCardLux name="Chief Architect" role="Head of Engineering" />
+            <LeadershipCardLux name="Technology Lead" role="AI & Data Platforms" />
+          </div>
+        </div>
+      </section>*/}
     </div>
   );
 };
